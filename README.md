@@ -3,10 +3,16 @@
 This semester, you are designing a fft and slicing block for a simple OFDM communications system. There are many trade offs in such systems, but this system is designed to the following specifications:
 
 • 128 point FFT (complex)
+
 • Tones are at even numbered bins 4 to 50
-◦ 24 tones, each tone coded as two bits (4 levels) ▪ 48 bits per symbol (One 128 point FFT)
-• Tone 55 and 57 are fixed tones (Used for sync and other things) ◦ Either may be present
-◦ Can be used to approximate 100% height
+
+    ◦ 24 tones, each tone coded as two bits (4 levels) 
+      ◦ 48 bits per symbol (One 128 point FFT)
+    
+• Tone 55 and 57 are fixed tones (Used for sync and other things) 
+  
+    ◦ Either may be present
+    ◦ Can be used to approximate 100% height
 
 The fft works with complex inputs (From an IQ decoder) The 128 points are provided as a pair of complex fixed point signed 17 bit numbers with the binary point between bit 14 and 15. This is 2.15 notation. The two bits above the binary point allows the input to vary between -/+ 1/2^15 or +/- 1.999969.
 It is up to you to come up with an FFT algorithm that meets the performance requirements. A quick google search shows 59,600,000 hits on fft. You should have limited challenges finding an FFT algorithm.
@@ -33,4 +39,41 @@ A simple python model is provided (m3.py) so you can see the algorithm. It uses 
 
 
 [287S24proj_V2.pdf](https://github.com/user-attachments/files/16023603/287S24proj_V2.pdf)
+
+# What is OFDM ? 
+
+Orthogonal Frequency Division Multiplexing (OFDM) is a digital multi-carrier modulation scheme that extends the concept of single subcarrier modulation by using multiple subcarriers within the same single channel.
+
+Further information can be found in these websites :
+
+-> https://helpfiles.keysight.com/csg/89600B/Webhelp/Subsystems/wlan-ofdm/content/ofdm_basicprinciplesoverview.htm
+
+-> https://www.researchgate.net/figure/Basic-FFT-OFDM-transmitter-and-receiver_fig7_259590473
+
+-> https://www.researchgate.net/figure/FFT-and-FFT-operation-of-OFDM-system_fig3_333674035
+
+
+
+
+
+More information about OFDM is just a google search away :)
+
+![image](https://github.com/KashyapKurella3000/An-FFT-and-slicing-block-for-a-simple-OFDM-communications-system/assets/107281469/9edcfe2d-6ed6-498a-8341-de90bb85459b)
+
+This project avoids usage the Cyclic Prefix blocks.
+
+
+
+# Important points to be noted:
+
+Complex valued Time-domain signal       ---(FFT)----> Complex valued Frequency-domain signal
+
+Complex valued Frequency-domain signal  ---(IFFT)---> Complex valued Time-domain signal
+
+
+
+
+
+
+
 

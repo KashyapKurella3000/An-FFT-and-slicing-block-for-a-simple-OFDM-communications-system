@@ -38,7 +38,7 @@ The module has the following ports:
 A simple python model is provided (m3.py) so you can see the algorithm. It uses for loops, and is not implemented the same as the design. Python works in complex numbers, system verilog does not. You cannot cut and paste this code. There is much commented code which can be used to print or write debug information to a file. Running the python code will generate a function that will return the twiddle factors e-i2πk/N N is the number of points on each level. This table has N=128. To get the twiddle factors for the third level (4 unique numbers) each value index is k*64/(2Lvl) assuming the Lvl starts with 0 performing adjacent 2 point butterflys. The above expression can be simplified by noting that 64 is 26 . This becomes k*26-Lvl then gives k<<(6-Lvl).
 
 
-[287S24proj_V2.pdf](https://github.com/user-attachments/files/16023603/287S24proj_V2.pdf)
+Project Specification file can be found here -> [287S24proj_V2.pdf](https://github.com/user-attachments/files/16023603/287S24proj_V2.pdf)
 
 # What is OFDM ? 
 
@@ -54,9 +54,9 @@ Further information can be found in these websites :
 
 
 
-
-
 More information about OFDM is just a google search away :)
+
+# Block Diagram 
 
 ![image](https://github.com/KashyapKurella3000/An-FFT-and-slicing-block-for-a-simple-OFDM-communications-system/assets/107281469/9edcfe2d-6ed6-498a-8341-de90bb85459b)
 
